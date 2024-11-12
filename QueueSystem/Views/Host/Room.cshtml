@@ -1,0 +1,29 @@
+@model Host
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@Model.Pin</title>
+</head>
+<p>Your group PIN is @Model.Pin</p>
+@if (string.IsNullOrEmpty(@Model.UserNameList[0]))
+{
+    @foreach (var person in @Model.UserNameList)
+    {
+        <tr>
+            <td>@person</td>
+        </tr>
+    }
+}
+
+<body>
+<div>
+      
+</div>
+</body>
+</html>
